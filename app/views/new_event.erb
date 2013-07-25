@@ -1,0 +1,20 @@
+<% if @event %>
+   <% @event.errors.each do |attribute, message| %>
+     <p>Error: <%=attribute%> <%=message%></p>
+   <% end %>
+<% end %>
+<form action= "/events/create" method="POST">
+<label for="title">Event Title:</label>
+<input id="event_title" type="text" name="title">
+<br>
+<label for="organizer_name">Organizer Name:</label>
+<input id="organizer_name" type="text" name="organizer_name">
+<br>
+<label for="organizer_email">Organizer Email:</label>
+<input id="organizer_email" type="text" name="organizer_email">
+<br>
+<label for="tags">Date:</label>
+<input id="date" type="date" name="date">
+<input type="submit">
+<br>
+<form>
